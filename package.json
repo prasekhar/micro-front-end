@@ -12,6 +12,7 @@
   "dependencies": {
     "@loadable/component": "^5.10.3",
     "angular": "^1.7.9",
+    "angular-cli": "^1.0.0-beta.28.3",
     "angular-ui-router": "^1.0.23",
     "argon-dashboard-react": "^1.0.0",
     "bootstrap": "^4.4.1",
@@ -27,6 +28,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "single-spa": "^4.4.2",
+    "single-spa-angular": "^3.1.0",
     "single-spa-angularjs": "^3.1.0",
     "single-spa-react": "^2.11.0",
     "yup": "^0.28.0"
