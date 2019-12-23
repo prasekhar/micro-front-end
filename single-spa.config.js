@@ -25,6 +25,12 @@ registerApplication(
 registerApplication(
   'angularJS', 
   () => import ('./src/angularJS/angularJS.app.js'), 
-  pathPrefix('/angular')
+  pathPrefix('/angularJS')
 );
+
+registerApplication(
+  'angular',
+  ()=> import ('./src/angular/src/main.single-spa.ts'),
+  pathPrefix('angular')
+)
 start()

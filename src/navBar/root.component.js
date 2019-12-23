@@ -25,10 +25,13 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/angular" onClick={navigateToUrl} >Angular</NavLink>
+              <NavLink href="/angularJs" onClick={navigateToUrl} >Angular Js</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/react" onClick={navigateToUrl} >React</NavLink>
+              <NavLink href="/react" onClick={navigateToUrl} >React Js</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/angular" onClick={navigateToUrl} >Angular</NavLink>
             </NavItem>
           </Nav>
           <NavbarText>SingleSpa app</NavbarText>
