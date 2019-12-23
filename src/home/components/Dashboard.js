@@ -4,7 +4,6 @@ import {
   Container, Jumbotron
 } from "reactstrap";
 
-import ContactUs from './ContactUs';
 
 class Dashboard extends Component {
    componentDidCatch(error, errorInfo){
