@@ -1,0 +1,10 @@
+
+.mt-10 { 
+    margin-top:10;
+}
+.radio-label {
+    margin-left:5px;
+}
+.form-check {
+    padding-left:0 !important;
+}
