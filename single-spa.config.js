@@ -31,6 +31,6 @@ registerApplication(
 registerApplication(
   'angular',
   ()=> import ('./src/angular/src/main.single-spa.ts'),
-  pathPrefix('/ts')
+  pathPrefix('/angular8')
 )
 start()

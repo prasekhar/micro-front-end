@@ -6,7 +6,7 @@ const domElementGetter = () => document.getElementById('app');
 const angularLifecycles = singleSpaAngularJS({
   angular,
   domElementGetter,
-  mainAngularModule: 'app',
+  mainAngularModule: 'angularApp',
   uiRouter: true,
   preserveGlobal: false,
 })

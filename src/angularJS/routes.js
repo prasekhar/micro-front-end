@@ -1,7 +1,7 @@
 import angular from 'angular';
 import './root.component.js';
 angular
-.module('app')
+.module('angularApp')
 .config(($stateProvider, $locationProvider) => {
   $locationProvider.html5Mode({
     enabled: true,
@@ -9,7 +9,7 @@ angular
   });
   $stateProvider
     .state('root', {
-      url: '/angular',
+      url: '/angularJS',
       template: '<root />',
     });
 });

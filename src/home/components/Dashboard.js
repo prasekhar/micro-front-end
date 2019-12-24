@@ -5,6 +5,7 @@ import {
 } from "reactstrap";
 
 
+
 class Dashboard extends Component {
    componentDidCatch(error, errorInfo){
       console.warn(error);
