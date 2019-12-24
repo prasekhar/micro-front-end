@@ -5,9 +5,15 @@ import {
   Route
 } from "react-router-dom";
 
+
+import { Provider } from 'react-redux';
+
+import store from './redux';
+
 import Dashboard from "./components/Dashboard";
 
 const App = () => (
+  <Provider store={store}>
   <Router basename="/home">
     <Route
       render={({ location }) => (
@@ -20,5 +26,6 @@ const App = () => (
       )}
     />
   </Router>
+  </Provider>
 );
 export default App;
