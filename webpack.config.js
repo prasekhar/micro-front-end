@@ -7,10 +7,15 @@ module.exports = {
     // Set the single-spa config as the project entry point
     'single-spa.config': './single-spa.config.js',
   },
+
+  devtool: 'inline-source-map',
   output: {
     publicPath: '/dist/',
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
   module: {
     rules: [
@@ -34,7 +39,12 @@ module.exports = {
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: ['file-loader']
-      }
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
     ]
   },
   plugins: [
