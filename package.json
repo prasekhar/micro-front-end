@@ -54,7 +54,8 @@
     "typescript": "~3.4.1",
     "yup": "^0.28.0",
     "zone.js": "^0.9.1",
-    "rx": "^4.1.0"
+    "rx": "^4.1.0",
+    "react-notifications-component": "^2.2.4"
   },
   "devDependencies": {
     "@angular/compiler-cli": "^8.2.14",

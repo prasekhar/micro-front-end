@@ -12,8 +12,13 @@ import {
   NavbarText
 } from 'reactstrap';
 
+import Notifications from './components/Notifications';
+
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [noOfContacts, setContacts] = useState(0);
+
+  window.addEventListener("contactAdded", function(e) { setContacts(noOfContacts+1) });
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -34,9 +39,10 @@ const NavBar = (props) => {
               <NavLink href="/angularTs" onClick={navigateToUrl} >Angular</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>SingleSpa app</NavbarText>
+          <NavbarText>Contacts Added : {noOfContacts}</NavbarText>
         </Collapse>
       </Navbar>
+      <Notifications/>
     </div>
   );
 }
