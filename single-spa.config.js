@@ -24,13 +24,13 @@ registerApplication(
 );
 registerApplication(
   'angularJS', 
-  () => import ('./src/angularJS/angularJS.app.js'), 
+  () => import ('./src/angularJS/angularJS.spa-config.js'),
   pathPrefix('/angularJS')
 );
-
 registerApplication(
   'angular',
-  ()=> import ('./src/angular/src/main.single-spa.ts'),
-  pathPrefix('/angular8')
-)
-start()
+  ()=> import ('./src/angular/angular.spa-config.js').then(module => {}),
+  pathPrefix('/angularTs')
+);
+
+start();

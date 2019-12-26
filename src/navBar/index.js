@@ -31,7 +31,7 @@ const NavBar = (props) => {
               <NavLink href="/react" onClick={navigateToUrl} >React Js</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/angular8" onClick={navigateToUrl} >Angular</NavLink>
+              <NavLink href="/angularTs" onClick={navigateToUrl} >Angular</NavLink>
             </NavItem>
           </Nav>
           <NavbarText>SingleSpa app</NavbarText>

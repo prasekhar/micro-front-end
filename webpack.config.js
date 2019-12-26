@@ -1,10 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { AngularCompilerPlugin } = require('@ngtools/webpack');
 module.exports = {
   mode: 'development',
   entry: {
-    // Set the single-spa config as the project entry point
     'single-spa.config': './single-spa.config.js',
   },
 
@@ -50,6 +50,16 @@ module.exports = {
   plugins: [
     // A webpack plugin to remove/clean the output folder before building
     new CleanWebpackPlugin(),
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core/,
+      path.resolve(__dirname, 'dist'),
+      { }
+    ),
+    new AngularCompilerPlugin({
+      tsConfigPath: './src/angular/tsconfig.json',
+      entryModule: './src/angular/main.module#AppModule',
+      sourceMap: true
+   })
   ],
   devtool: 'source-map',
   externals: [],
